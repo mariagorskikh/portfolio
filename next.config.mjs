@@ -17,7 +17,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/cyberpunk-portfolio',
+  basePath: '/portfolio',
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
