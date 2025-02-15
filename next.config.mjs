@@ -11,8 +11,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/portfolio',
-  assetPrefix: '/portfolio/',
+  basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio/' : '',
+  trailingSlash: true,
 }
 
 mergeConfig(nextConfig, userConfig)
