@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-blue: #00ffff;
+  --neon-pink: #ff00ff;
+  --neon-green: #39ff14;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
+
+@layer utilities {
+  .text-neon-blue {
+    color: var(--neon-blue);
+    text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+    animation: neon-flicker 1.5s infinite alternate;
+  }
+
+  .text-neon-pink {
+    color: var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--neon-pink);
+    animation: neon-flicker 1.7s infinite alternate;
+  }
+
+  .text-neon-green {
+    color: var(--neon-green);
+    text-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green);
+    animation: neon-flicker 1.3s infinite alternate;
+  }
+
+  .border-neon-blue {
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+  }
+
+  .border-neon-pink {
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--neon-pink);
+  }
+
+  .bg-neon-blue {
+    background-color: var(--neon-blue);
+  }
+
+  .bg-neon-pink {
+    background-color: var(--neon-pink);
+  }
+
+  .bg-neon-green {
+    background-color: var(--neon-green);
+  }
+}
+
+@keyframes neon-flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 0.99;
+  }
+  20%,
+  24%,
+  55% {
+    opacity: 0.5;
+  }
+}
+
