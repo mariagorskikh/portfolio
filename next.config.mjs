@@ -8,11 +8,13 @@ try {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  distDir: 'dist',
   images: {
     unoptimized: true
   },
   basePath: '/portfolio',
+  assetPrefix: '/portfolio/',
+  trailingSlash: true,
+  distDir: 'out'
 }
 
 mergeConfig(nextConfig, userConfig)
