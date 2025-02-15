@@ -9,12 +9,10 @@ try {
 const nextConfig = {
   output: 'export',
   images: {
-    unoptimized: true
+    unoptimized: true,
   },
   basePath: '/portfolio',
   assetPrefix: '/portfolio/',
-  trailingSlash: true,
-  distDir: 'out'
 }
 
 mergeConfig(nextConfig, userConfig)
