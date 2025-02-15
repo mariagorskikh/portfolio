@@ -18,10 +18,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+          cache: 'npm'
 
-      - name: Install and Build 🔧
+      - name: Install Dependencies 🔧
+        run: npm install --legacy-peer-deps
+
+      - name: Build 🏗️
         run: |
-          npm install
           npm run build
           touch out/.nojekyll
           cp out/index.html out/404.html
